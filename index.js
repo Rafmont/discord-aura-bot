@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 const bot = new Discord.Client();
 
-const token = "NzQ2MTcyNTcxNzI4MjE2MTE1.Xz8dXA.3eQnoOwWXo4AFhnRxdfQFAI2dIY";
+const token = "NzQ2MTcyNTcxNzI4MjE2MTE1.Xz8dXA._5pEpEZl_pSJR9R40VQZ1BhyHkM";
 
 bot.on("ready", () => {
   console.log("bot running!");
@@ -20,7 +20,7 @@ bot.on("message", (msg) => {
 
   //Rola um D20
   if (message === "=>d20") {
-    let resultado = Math.floor(Math.random() * 21);
+    let resultado = Math.floor(Math.random() * (20 - 1) + 1);
     msg.delete();
     msg.reply("rodou um D20 e tirou " + resultado + ".");
   }
